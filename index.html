@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Guan</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .content {
+            width: 90vw;  /* 90% of the viewport width */
+            height: 80vh; /* 80% of the viewport height */
+            background-color: #fff;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5vw; /* 5% of the viewport width */
+        }
+
+        p {
+            font-size: 2vw;
+        }
+    </style>
+    </head>
+
+
+
+
+
+
+
+<body>
+    <header>
+        <h1>Howl's Moving Castle</h1>
+        <h2>red-stoned ring</h2>
+    </header>
+</body>
+
+
+
+
+
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Felipa&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Felipa&display=swap" rel="stylesheet">
+
+        <style>
+    
+            /* 头部样式 */
+            header {
+                text-align: center;
+                width: 100%;       /* 头部宽度为 100% */
+                padding: 40px;     /* 增加内边距，调整头部的高度 */
+                animation: fadeIn 1.5s ease-out;
+            }
+
+            h1 {
+            font-size: 100px;
+            font-family: 'Tangerine', cursive; /* 设置为 Tangerine 字体 */
+            color: #ffffff; /* 深紫色 */
+            text-shadow: 0 0 5px #fcdffc, 0 0 10px #fcdffc, 0 0 15px #fcdffc, 0 0 20px #fcdffc, 0 0 30px #fcdffc, 0 0 40px #fcdffc; /* 粉色微光效果 */
+            margin: 0;
+            position: relative;  /* 设置相对定位 */
+            top: 20px;           /* 向下移动 20px */
+            animation: float 3s ease-in-out infinite; /* 浮动动画 */
+        }
+
+        /* 副标题样式 */
+        h2 {
+                font-size: 30px;
+                font-family: 'Felipa', cursive; /* 字体 */
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                margin: 10px 0;
+                position: relative;  /* 设置相对定位 */
+                top: 500px;           /* 向下移动 20px */
+                animation: fadeIn 2s ease-out 1s, glow 3s ease-in-out infinite; /* 渐显和发光动画 */
+
+                /* 字体渐变颜色 */
+                background: linear-gradient(45deg, #7a9ecf, #f27d84); /* 蓝色到红色渐变 */
+                -webkit-background-clip: text; /* 背景裁剪到文字 */
+                background-clip: text; /* 背景裁剪到文字 */
+                color: transparent; /* 文字颜色透明，以便显示渐变 */
+            }
+    
+    
+            /* 关键帧动画 - 浮动效果 */
+            @keyframes float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-10px); }
+            }
+
+
+        /* 发光动画 - 微光效果 */
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #f5a6f5, 0 0 10px #f5a6f5, 0 0 15px #f5a6f5, 0 0 20px #f5a6f5, 0 0 30px #f5a6f5, 0 0 40px #f5a6f5;
+            }
+            50% {
+                text-shadow: 0 0 10px #f5a6f5, 0 0 20px #f5a6f5, 0 0 30px #f5a6f5, 0 0 40px #f5a6f5, 0 0 50px #f5a6f5, 0 0 60px #f5a6f5;
+            }
+            100% {
+                text-shadow: 0 0 5px #f5a6f5, 0 0 10px #f5a6f5, 0 0 15px #f5a6f5, 0 0 20px #f5a6f5, 0 0 30px #f5a6f5, 0 0 40px #f5a6f5;
+            }
+        }
+
+
+    /* 发光动画 - 渐变闪光效果 */
+    @keyframes glow {
+        0% {
+            text-shadow: 0 0 5px #7a9ecf, 0 0 10px #7a9ecf, 0 0 15px #7a9ecf, 0 0 20px #f27d84, 0 0 25px #f27d84, 0 0 30px #f27d84;
+        }
+        50% {
+            text-shadow: 0 0 10px #7a9ecf, 0 0 20px #7a9ecf, 0 0 30px #7a9ecf, 0 0 40px #f27d84, 0 0 50px #f27d84, 0 0 60px #f27d84;
+        }
+        100% {
+            text-shadow: 0 0 5px #7a9ecf, 0 0 10px #7a9ecf, 0 0 15px #7a9ecf, 0 0 20px #f27d84, 0 0 25px #f27d84, 0 0 30px #f27d84;
+        }
+    }
+
+    /* 渐显效果 */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+           
+        </style>
+
+
+
+
+
+
+
+
+
+
+<a href="page2.html">
+    <div class="image-container">
+        <!-- 左侧图片 -->
+        <img src="p1-3.gif" alt="Left Image" class="image-left">
+        
+        <!-- 中间图片 -->
+        <img src="p1-1.png" alt="Ring" class="image-center">
+
+        <!-- 右侧图片 -->
+        <img src="p1-4.gif" alt="Right Image" class="image-right">
+    </div>
+</a>
+
+<style>
+    /* 图片容器，使用 flexbox 布局 */
+    .image-container {
+        display: flex;
+        justify-content: space-between;  /* 图片之间的间距更小 */
+        align-items: center;            /* 图片垂直居中 */
+        width: 100vw;                   /* 容器宽度为视口宽度 */
+        height: 100vh;                  /* 容器高度为视口高度 */
+        margin: 0 auto;                 /* 容器水平居中 */
+        margin-top: -200px;              /* 将容器整体上移 50px */
+        box-sizing: border-box;         /* 确保内边距和边框不影响布局 */
+    }
+
+  /* 左侧图片 */
+  .image-left {
+        width: 30vw;                     /* 图片宽度为容器的 30% */
+        height: auto;                   /* 高度自适应 */
+        margin-right: 0vw;              /* 缩小右边的间距，调整为 0.5vw */
+        transition: transform 0.3s ease, filter 0.3s ease; /* 过渡效果 */
+        animation: swingLeft 4s ease-in-out infinite; /* 左侧图片左右摇摆 */
+    }
+
+    /* 中间图片 */
+    .image-center {
+        width: 30vw;                     /* 图片宽度为容器的 30% */
+        height: auto;                   /* 高度自适应 */
+        transition: transform 0.3s ease, filter 0.3s ease;
+        animation: rotateAnimation 10s linear infinite; /* 旋转动画 */
+    }
+    
+
+    /* 右侧图片 */
+    .image-right {
+        width: 30vw;                     /* 图片宽度为容器的 30% */
+        height: auto;                   /* 高度自适应 */
+        margin-left: 0vw;              /* 缩小右边的间距，调整为 0.5vw */
+        transition: transform 0.3s ease, filter 0.3s ease; /* 过渡效果 */
+        animation: swingRight 4s ease-in-out infinite; /* 右侧图片左右摇摆 */
+    }
+
+    /* 鼠标悬停时的变换效果 */
+    .image-container img:hover {
+        transform: scale(1.1);   /* 放大图片 */
+        filter: brightness(1.2); /* 增加亮度 */
+    }
+
+        /* 鼠标悬停时的放大效果 */
+        .image-container img:hover {
+        transform: scale(1.9);   /* 放大图片 */
+        filter: brightness(2.4); /* 增加亮度 */
+    }
+
+    /* 定义旋转动画 */
+    @keyframes rotateAnimation {
+        0% {
+            transform: rotate(0deg); /* 从 0 度开始 */
+        }
+        100% {
+            transform: rotate(360deg); /* 旋转 360 度 */
+        }
+    }
+
+    /* 定义左侧图片的左右摇摆动画 */
+@keyframes swingLeft {
+    0%, 100% {
+        transform: translateX(-10px); /* 左边偏移 10px */
+    }
+    50% {
+        transform: translateX(10px); /* 右边偏移 10px */
+    }
+}
+
+/* 定义右侧图片的左右摇摆动画 */
+@keyframes swingRight {
+    0%, 100% {
+        transform: translateX(10px); /* 右边偏移 10px */
+    }
+    50% {
+        transform: translateX(-10px); /* 左边偏移 10px */
+    }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        body {
+          background-image: url('p1-2.png');
+          background-repeat: no-repeat;
+          background-attachment: fixed;  
+          background-size: cover;
+        }
+        
+        img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}    
+
+        </style>
+
+
+
+
+
+
+
+
+    <audio id="background-music" src="assets/music.m4a" loop></audio>
+
+    <script>
+        const music = document.getElementById("background-music");
+
+        // 页面加载时尝试从上次保存的位置播放
+        window.addEventListener("load", () => {
+            // 从 localStorage 中获取上次播放位置
+            const lastPlayTime = localStorage.getItem("musicPlayTime");
+
+            // 如果有上次播放时间，将音频设置到此时间开始播放
+            if (lastPlayTime) {
+                music.currentTime = parseFloat(lastPlayTime);
+            }
+
+            // 尝试自动播放音乐
+            const playPromise = music.play();
+            
+            // 如果自动播放被阻止，则等待用户点击页面
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    console.log("Autoplay was prevented. Waiting for user interaction.");
+                    document.body.addEventListener("click", playAudio);
+                });
+            }
+        });
+
+        // 每秒更新当前播放时间到 localStorage
+        setInterval(() => {
+            localStorage.setItem("musicPlayTime", music.currentTime);
+        }, 1000); // 每隔1秒更新一次
+
+        // 在用户点击页面时播放音乐
+        function playAudio() {
+            music.play();
+            document.body.removeEventListener("click", playAudio);
+        }
+    </script>
+
+
+</html>
