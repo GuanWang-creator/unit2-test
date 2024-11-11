@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Emptiness</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+      <!-- 引入 Charmonman 字体 -->
+      <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+      <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url('p6-1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+        }
+
+
+
+        /* 将 h1 和 h2 的字体设置为 Charmonman */
+        h1 {
+            font-family: 'Charmonman', cursive;
+            font-size: 7vw; /* 增加字体大小 */
+            color: #1c1717; /* 可选：设置字体颜色 */
+            margin-top: -20px; /* 向下移动 h2 */
+            animation: wave 5s infinite ease-in-out, shimmer 3s infinite alternate;
+        }
+
+
+
+
+
+
+
+    </style>
+
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+    <header>
+        <h1>Emptiness</h1>
+    </header>
+
+    <a href="index.html"">
+        <div class="image-container">
+            <!-- 1 -->
+            <img src="6-2.png" alt="image-1" class="image-1">
+        </div>
+    </a>
+
+
+
+    <style>
+        /* 图片容器，使用 flexbox 布局 */
+        .image-container {
+            display: flex;
+            align-items: center;            /* 图片垂直居中 */
+            width: 30vw;                   /* 容器宽度为视口宽度 */
+            height: 100vh;                  /* 容器高度为视口高度 */
+            margin: 0 auto;                 /* 容器水平居中 */
+            margin-top: -200px;              /* 将容器整体上移 50px */
+        }
+    
+
+    
+        /* 中间图片 */
+        .image-1 {
+            width: 30vw;                     /* 图片宽度为容器的 30% */
+            height: auto;                   /* 高度自适应 */
+            transition: transform 0.3s ease, filter 0.3s ease;
+            animation: rotateAnimation 10s linear infinite; /* 旋转动画 */
+        }
+        
+    
+        /* 鼠标悬停时的变换效果 */
+        .image-container img:hover {
+            transform: scale(1.1);   /* 放大图片 */
+            filter: brightness(1.2); /* 增加亮度 */
+        }
+    
+            /* 鼠标悬停时的放大效果 */
+            .image-container img:hover {
+            transform: scale(1.9);   /* 放大图片 */
+            filter: brightness(2.4); /* 增加亮度 */
+        }
+    
+        /* 定义旋转动画 */
+        @keyframes rotateAnimation {
+            0% {
+                transform: rotate(0deg); /* 从 0 度开始 */
+            }
+            100% {
+                transform: rotate(360deg); /* 旋转 360 度 */
+            }
+        }
+
+    
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+     <!-- 隐藏音频播放器 -->
+     <audio id="background-music" src="assets/music.m4a" loop></audio>
+
+     <script>
+         const music = document.getElementById("background-music");
+ 
+         // 页面加载时尝试从上次保存的位置播放
+         window.addEventListener("load", () => {
+             // 从 localStorage 中获取上次播放位置
+             const lastPlayTime = localStorage.getItem("musicPlayTime");
+ 
+             // 如果有上次播放时间，将音频设置到此时间开始播放
+             if (lastPlayTime) {
+                 music.currentTime = parseFloat(lastPlayTime);
+             }
+ 
+             // 尝试自动播放音乐
+             const playPromise = music.play();
+             
+             // 如果自动播放被阻止，则等待用户点击页面
+             if (playPromise !== undefined) {
+                 playPromise.catch(() => {
+                     console.log("Autoplay was prevented. Waiting for user interaction.");
+                     document.body.addEventListener("click", playAudio);
+                 });
+             }
+         });
+ 
+         // 每秒更新当前播放时间到 localStorage
+         setInterval(() => {
+             localStorage.setItem("musicPlayTime", music.currentTime);
+         }, 1000); // 每隔1秒更新一次
+ 
+         // 在用户点击页面时播放音乐
+         function playAudio() {
+             music.play();
+             document.body.removeEventListener("click", playAudio);
+         }
+     </script>
+
+</body>
+</html>
